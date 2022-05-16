@@ -71,7 +71,7 @@ body {
     color: white;
     font-size: 1.5rem;
     min-width: 32rem;
-    
+    transition: transform 0.4s linear;
 }
 
 .controls{
@@ -114,34 +114,34 @@ body {
 }
 
 #mem1:checked ~ .slider__container .slides,
-#mem1:checked ~ .description .title-1,
-#mem1:checked ~ .description .title-2,
-#mem1:checked ~ .description .title-3,
-#mem1:checked ~ .description .title-4 {
+#mem1:checked ~ .control-container .title-1,
+#mem1:checked ~ .control-container .title-2,
+#mem1:checked ~ .control-container .title-3,
+#mem1:checked ~ .control-container .title-4 {
     transform: translateX(0);
 }
     
 #mem2:checked ~ .slider__container .slides,
-#mem2:checked ~ .description .title-1,
-#mem2:checked ~ .description .title-2,
-#mem2:checked ~ .description .title-3,
-#mem2:checked ~ .description .title-4 {
+#mem2:checked ~ .control-container .title-1,
+#mem2:checked ~ .control-container .title-2,
+#mem2:checked ~ .control-container .title-3,
+#mem2:checked ~ .control-container .title-4 {
     transform: translateX(-100%);
 }
     
 #mem3:checked ~ .slider__container .slides,
-#mem3:checked ~ .description .title-1,
-#mem3:checked ~ .description .title-2,
-#mem3:checked ~ .description .title-3,
-#mem3:checked ~ .description .title-4 {
+#mem3:checked ~ .control-container .title-1,
+#mem3:checked ~ .control-container .title-2,
+#mem3:checked ~ .control-container .title-3,
+#mem3:checked ~ .control-container .title-4 {
     transform: translateX(-200%);
 }
     
 #mem4:checked ~ .slider__container .slides,
-#mem4:checked ~ .description .title-1,
-#mem4:checked ~ .description .title-2,
-#mem4:checked ~ .description .title-3,
-#mem4:checked ~ .description .title-4 {
+#mem4:checked ~ .control-container .title-1,
+#mem4:checked ~ .control-container .title-2,
+#mem4:checked ~ .control-container .title-3,
+#mem4:checked ~ .control-container .title-4 {
     transform: translateX(-300%);
 }
     
