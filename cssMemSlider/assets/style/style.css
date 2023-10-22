@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(29, 28, 37);
+    background-image: url(../dark_wall.webp);
+}
+
+.container{
+    margin: 5rem auto 0;
+    padding: 1rem 2rem;
+    width: fit-content;
+    background-color:rgba(0, 0, 0, 0.082);
+    border-radius: 5%;
+}
+.container > input {
+    visibility: hidden;
+}
+.slider__container{   
+    max-width: 50rem;
+    overflow: hidden;    
+	box-shadow: 0 0 2rem rgba(0, 0, 0, .7);
+    background-size: 100% auto;
+}
+.slides{
+    display: flex;
+    transition: 0.3s ease-in-out;   
+}
+.slides img{
+    width: 100%;
+    height: auto;
+    object-fit: fill;    
+}
+
+.control-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+
+.description {
+    display: flex;
+    overflow: hidden;
+    width: 30rem;
+    height: 2rem;
+}
+.description p{
+    color: white;
+    font-size: 1.5rem;
+    font-family: Arial;
+    min-width: 32rem;
+    transition: transform 0.4s linear;
+}
+
+.controls{
+    display: flex;
+}
+.controls label {
+    cursor: pointer;    
+    flex-direction: row;
+    position: relative;   
+	border-radius: 50%;
+    padding: 1rem;    
+    transition: all .4s ease-in-out;
+}
+.controls label:active > .circle{
+    transform: scale(0.5);
+}
+
+.controls label .circle{
+    display: block;
+    align-self: center;
+    margin: auto;  
+    width: 1rem;
+    height: 1rem;
+    background-color:rgb(43, 111, 173);
+    border-radius: 50%;
+    border: 0.2rem solid rgb(43, 111, 173);      
+}
+
+label:hover .circle{
+    border-color: #fff;
+    background-color: #fff;
+}
+
+#mem1:checked ~ .control-container .controls label[for=mem1] .circle,
+#mem2:checked ~ .control-container .controls label[for=mem2] .circle,
+#mem3:checked ~ .control-container .controls label[for=mem3] .circle,
+#mem4:checked ~ .control-container .controls label[for=mem4] .circle {
+    background-color: transparent;
+}
+
+#mem1:checked ~ .slider__container .slides,
+#mem1:checked ~ .control-container .title-1,
+#mem1:checked ~ .control-container .title-2,
+#mem1:checked ~ .control-container .title-3,
+#mem1:checked ~ .control-container .title-4 {
+    transform: translateX(0);
+}
+    
+#mem2:checked ~ .slider__container .slides,
+#mem2:checked ~ .control-container .title-1,
+#mem2:checked ~ .control-container .title-2,
+#mem2:checked ~ .control-container .title-3,
+#mem2:checked ~ .control-container .title-4 {
+    transform: translateX(-100%);
+}
+    
+#mem3:checked ~ .slider__container .slides,
+#mem3:checked ~ .control-container .title-1,
+#mem3:checked ~ .control-container .title-2,
+#mem3:checked ~ .control-container .title-3,
+#mem3:checked ~ .control-container .title-4 {
+    transform: translateX(-200%);
+}
+    
+#mem4:checked ~ .slider__container .slides,
+#mem4:checked ~ .control-container .title-1,
+#mem4:checked ~ .control-container .title-2,
+#mem4:checked ~ .control-container .title-3,
+#mem4:checked ~ .control-container .title-4 {
+    transform: translateX(-300%);
+}
+    
+@media screen and (max-width: 768px) { 
+    .control-container{
+        flex-direction: column-reverse;
+        padding-top: 0;
+        padding-bottom: 1rem;
+    }
+    .description{
+        align-self: flex-start;
+        align-items: center;
+    }
+    .description p{ 
+        font-size: 1rem;
+    }
+}
